@@ -23,9 +23,14 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('people', 'PeopleController@show');
 
 
-/* Products API */
+/* Products */
 
 Route::get('products', 'ProductController@show');
+
+
+/* Tariffs */
+
+Route::get('tariffs', 'ProductController@tariff');
 
 /* Order Product */
 

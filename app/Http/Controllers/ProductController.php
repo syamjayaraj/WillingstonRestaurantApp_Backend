@@ -22,6 +22,14 @@ use App\Http\Resources\Tariffarea as TariffareaResource;
 
 class ProductController extends Controller
 {
+
+	public function tariff(){
+
+		$tariffarea = Tariffarea::get();
+
+		return TariffareaResource::collection($tariffarea);
+	}
+
 	public function show(){
 		$product=Product::get();
 		$product_category = ProductCategory::get();
