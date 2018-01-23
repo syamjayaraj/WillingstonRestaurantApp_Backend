@@ -18,6 +18,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 
+// People
+
+Route::get('people', 'PeopleController@show');
+
 
 /* Products API */
 
@@ -26,5 +30,12 @@ Route::get('products', 'ProductController@show');
 /* Order Product */
 
 Route::post('order', 'OrderController@store');
+
+Route::get('order', 'OrderController@show');
+
+
+/* Print */
+
+Route::post('printtokitchen', 'OrderController@printtokitchen');
 
 

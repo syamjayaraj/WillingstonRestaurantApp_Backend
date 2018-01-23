@@ -17,9 +17,8 @@ class CreateOrderItemsTable extends Migration
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->integer('products_id');
-            //$table->foreign('products_id')->references('id')->on('products');
+            $table->string('name');
             $table->integer('orders_id');
-            //$table->foreign('orders_id')->references('id')->on('orders');
             $table->integer('quantity');
             $table->integer('price');
             $table->timestamps();
